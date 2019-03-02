@@ -1,0 +1,34 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #fff;
+  background-color: #1A1A1D; }
+  body h1 {
+    color: #787878; }
+  body .icon-row {
+    display: flex;
+    align-items: center; }
+  body .cv-section {
+    margin-bottom: 1rem; }
+  body .cv-entry {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 0.1rem;
+    margin-bottom: 0.77777777777777rem;
+    grid-template-areas: "time title" "empty location" "empty description"; }
+    body .cv-entry .empty {
+      grid-area: empty; }
+    body .cv-entry .time {
+      grid-area: time; }
+    body .cv-entry .title {
+      grid-area: title;
+      color: #787878;
+      font-size: 1.2em;
+      margin-bottom: 0.5rem; }
+    body .cv-entry .location {
+      grid-area: location;
+      font-style: oblique; }
+    body .cv-entry .description {
+      grid-area: description; }
+
+/*# sourceMappingURL=styles.css.map */

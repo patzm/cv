@@ -1,0 +1,52 @@
+$font-stack:    Helvetica, sans-serif;
+$background-color: #1A1A1D;
+$primary-color: #fff;
+$secondary-color: #787878;
+$highlight-color: #f03252;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $background-color;
+  h1 {
+		color: $secondary-color;
+	}
+	.icon-row {
+		display: flex;
+		align-items: center;
+	}
+	.cv-section {
+		margin-bottom: 1rem;
+	}
+	.cv-entry {
+		display: grid;
+		grid-template-columns: 1fr 8fr;
+		grid-template-rows: repeat(3, auto);
+		grid-gap: 0.1rem;
+		margin-bottom: 0.77777777777777rem;
+		grid-template-areas:
+			"time title"
+			"empty location"
+			"empty description";
+
+		.empty {
+			grid-area: empty;
+		}
+		.time {
+			grid-area: time;
+		}
+		.title {
+			grid-area: title;
+			color: $secondary-color;
+			font-size: 1.2em;
+			margin-bottom: 0.5rem;
+		}
+		.location {
+			grid-area: location;
+			font-style: oblique;
+		}
+		.description {
+			grid-area: description;
+		}
+	}
+}
