@@ -36,6 +36,23 @@ body {
 		.subtitle {
 			color: $color-highlight-2;
 		}
+                .skills {
+                    li {
+                        display: flex;
+                        width: 50%;
+                        justify-content: flex-start;
+                    }
+                    .stars{
+                        margin-left: auto;
+                        align-self: right;
+                    }
+                    .star:before{
+                        content: "★"; 
+                    }
+                    .highlighted {
+                        color: red; 
+                    }
+                }
 	}
 
 	.section {
