@@ -1,52 +1,87 @@
 $font-stack:    Helvetica, sans-serif;
-$background-color: #1A1A1D;
-$primary-color: #fff;
-$secondary-color: #787878;
-$highlight-color: #f03252;
+$background-color: #2a2d34;
+$color-primary-1: #fff;
+$color-primary-2: #f6f7eb;
+$color-secondary-1: #787878;
+$color-highlight-1: #f26430;
+$color-highlight-2: #009ddc;
 
+html,body {
+  background-color: $background-color;
+}
+	
 body {
   font: 100% $font-stack;
-  color: $primary-color;
-  background-color: $background-color;
-  h1 {
-		color: $secondary-color;
+  color: $color-primary-1;
+  padding: 1rem;
+
+	a:visited {
+		color: $color-primary-2;
 	}
+
+	a:link, a:hover, a:active {
+		color: $color-highlight-1;
+	}
+
+	.subtitle {
+			margin-bottom: 1rem;
+	}
+
 	.icon-row {
 		display: flex;
 		align-items: center;
 	}
-	.cv-section {
-		margin-bottom: 1rem;
-	}
-	.cv-entry {
-		display: grid;
-		grid-template-columns: 1fr 8fr;
-		grid-template-rows: repeat(3, auto);
-		grid-gap: 0.1rem;
-		margin-bottom: 0.77777777777777rem;
-		grid-template-areas:
-			"time title"
-			"empty location"
-			"empty description";
 
-		.empty {
-			grid-area: empty;
+	.overview {
+		.subtitle {
+			color: $color-highlight-2;
 		}
-		.time {
-			grid-area: time;
+	}
+
+	.section {
+		padding: 0;
+	}
+
+	.cv {
+		.section {
+			.subtitle {
+				color: $color-highlight-1;
+			}
+			margin-bottom: 2rem;
 		}
-		.title {
-			grid-area: title;
-			color: $secondary-color;
-			font-size: 1.2em;
-			margin-bottom: 0.5rem;
-		}
-		.location {
-			grid-area: location;
-			font-style: oblique;
-		}
-		.description {
-			grid-area: description;
+
+		.entry {
+			display: grid;
+			grid-template-columns: 1fr 8fr;
+			grid-template-rows: repeat(3, auto);
+			grid-gap: 0.1rem;
+			margin-bottom: 0.77777777777777rem;
+			grid-template-areas:
+				"time name"
+				"empty location"
+				"empty description";
+
+			.empty {
+				grid-area: empty;
+			}
+			.time {
+				grid-area: time;
+			}
+			.name {
+				grid-area: name;
+				color: $color-primary-1;
+				font-size: 1.2em;
+				margin-bottom: 0.5rem;
+			}
+			.location {
+				grid-area: location;
+				color: $color-secondary-1;
+				font-style: oblique;
+			}
+			.description {
+				grid-area: description;
+				color: $color-primary-2;
+			}
 		}
 	}
 }
