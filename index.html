@@ -11,6 +11,61 @@
 </head>
 <body>
 
+<template id="stars-0">
+	<span class="icon"><i class="far fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+</template>
+<template id="stars-1">
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+</template>
+<template id="stars-2">
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+</template>
+<template id="stars-3">
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+</template>
+<template id="stars-4">
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="far fa-star"></i></span>
+</template>
+<template id="stars-5">
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="fas fa-star"></i></span>
+	<span class="icon"><i class="fas fa-star"></i></span>
+</template>
+
+<script type="text/javascript">
+	function createStars() {
+		var star_full = document.registerElement('star-full', {
+			prototype: Object.create()
+		})
+		var stars = document.registerElement('stars-5-base', {
+
+		});
+
+	}
+</script>
+
 <section class="section">
 	<div class="container">
 		<h1 class="title">Martin Patz</h1>
@@ -32,6 +87,18 @@
 				</div>				
 			</section>
 
+			<section class="section skills">
+				<h2 class="subtitle">programming</h2>
+
+
+
+				<h2 class="subtitle">languages</h2>
+				<ul>
+					<li>German <stars-5></stars-5></li>
+					<li>English</li>
+				</ul>
+				
+			</section>
 		</div>
 
 		<!-- CV COLUMN -->
