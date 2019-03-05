@@ -1,65 +1,59 @@
+@charset "UTF-8";
 html, body {
-  background-color: #2a2d34;
-}
+  background-color: #2a2d34; }
 
 body {
   font: 100% Helvetica, sans-serif;
   color: #fff;
-  padding: 1rem;
-}
-body a:visited {
-  color: #f6f7eb;
-}
-body a:link, body a:hover, body a:active {
-  color: #f26430;
-}
-body .subtitle {
-  margin-bottom: 1rem;
-}
-body .icon-row {
-  display: flex;
-  align-items: center;
-}
-body .overview .subtitle {
-  color: #009ddc;
-}
-body .section {
-  padding: 0;
-}
-body .cv .section {
-  margin-bottom: 2rem;
-}
-body .cv .section .subtitle {
-  color: #f26430;
-}
-body .cv .entry {
-  display: grid;
-  grid-template-columns: 1fr 8fr;
-  grid-template-rows: repeat(3, auto);
-  grid-gap: 0.1rem;
-  margin-bottom: 0.7777777778rem;
-  grid-template-areas: "time name" "empty location" "empty description";
-}
-body .cv .entry .empty {
-  grid-area: empty;
-}
-body .cv .entry .time {
-  grid-area: time;
-}
-body .cv .entry .name {
-  grid-area: name;
-  color: #fff;
-  font-size: 1.2em;
-  margin-bottom: 0.5rem;
-}
-body .cv .entry .location {
-  grid-area: location;
-  color: #787878;
-  font-style: oblique;
-}
-body .cv .entry .description {
-  grid-area: description;
-  color: #f6f7eb;
-}
-
-/*# sourceMappingURL=styles.css.map */
+  padding: 1rem; }
+  body a:visited {
+    color: #f6f7eb; }
+  body a:link, body a:hover, body a:active {
+    color: #f26430; }
+  body .subtitle {
+    margin-bottom: 1rem; }
+  body .icon-row {
+    display: flex;
+    align-items: center; }
+  body .overview .subtitle {
+    color: #009ddc; }
+  body .overview .skills li {
+    display: flex;
+    width: 50%;
+    justify-content: flex-start; }
+  body .overview .skills .stars {
+    margin-left: auto;
+    align-self: right; }
+  body .overview .skills .star:before {
+    content: "★"; }
+  body .overview .skills .highlighted {
+    color: red; }
+  body .section {
+    padding: 0; }
+  body .cv .section {
+    margin-bottom: 2rem; }
+    body .cv .section .subtitle {
+      color: #f26430; }
+  body .cv .entry {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 0.1rem;
+    margin-bottom: 0.77777777777777rem;
+    grid-template-areas: "time name" "empty location" "empty description"; }
+    body .cv .entry .empty {
+      grid-area: empty; }
+    body .cv .entry .time {
+      grid-area: time; }
+    body .cv .entry .name {
+      grid-area: name;
+      color: #fff;
+      font-size: 1.2em;
+      margin-bottom: 0.5rem; }
+    body .cv .entry .location {
+      grid-area: location;
+      color: #787878;
+      font-style: oblique; }
+    body .cv .entry .description {
+      grid-area: description;
+      color: #f6f7eb; }

@@ -7,63 +7,22 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css"/>
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 	<title>CV Martin Patz</title>
 </head>
 <body>
 
-<template id="stars-0">
-	<span class="icon"><i class="far fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-</template>
-<template id="stars-1">
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-</template>
-<template id="stars-2">
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-</template>
-<template id="stars-3">
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-</template>
-<template id="stars-4">
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="far fa-star"></i></span>
-</template>
-<template id="stars-5">
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="fas fa-star"></i></span>
-	<span class="icon"><i class="fas fa-star"></i></span>
-</template>
-
 <script type="text/javascript">
-	function createStars() {
-		var star_full = document.registerElement('star-full', {
-			prototype: Object.create()
-		})
-		var stars = document.registerElement('stars-5-base', {
-
-		});
-
-	}
+  $(document).ready(() => {
+    $(".stars").each(function() {
+      let times = parseInt($(this).attr('n'));
+      const maxStars = 5;
+      for (let i = 0; i < maxStars; i++){
+        let starClass = i < times ? "star highlighted" : "star"
+        $(this).append(`<span class='${starClass}'></span>`);
+      }
+    })
+  })
 </script>
 
 <section class="section">
@@ -90,12 +49,11 @@
 			<section class="section skills">
 				<h2 class="subtitle">programming</h2>
 
-
-
 				<h2 class="subtitle">languages</h2>
 				<ul>
-					<li>German <stars-5></stars-5></li>
-					<li>English</li>
+					<li>German <span class="stars" n="5"></span> </li>
+					<li>English <span class="stars" n="4"></span> </li>
+					<li>Spanisch <span class="stars" n="3"></span></li>
 				</ul>
 				
 			</section>
