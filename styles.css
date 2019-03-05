@@ -14,8 +14,12 @@ body a:visited {
 body a:link, body a:hover, body a:active {
   color: #f26430;
 }
+body .title {
+  color: #fff;
+}
 body .subtitle {
   margin-bottom: 1rem;
+  color: #f6f7eb;
 }
 body .icon-row {
   display: flex;
@@ -30,7 +34,6 @@ body .overview .skills .subtitle {
 }
 body .overview .skills li {
   display: flex;
-  width: 100%;
   justify-content: flex-start;
 }
 body .overview .skills .stars {
@@ -54,28 +57,26 @@ body .cv .section .subtitle {
 }
 body .cv .entry {
   display: grid;
-  grid-template-columns: 1fr 8fr;
+  grid-template-columns: 1fr 5fr;
   grid-template-rows: repeat(3, auto);
-  grid-gap: 0.5rem;
-  margin-bottom: 0.7777777778rem;
-  grid-template-areas: "time name" "empty location" "empty description";
-}
-body .cv .entry .empty {
-  grid-area: empty;
-}
-body .cv .entry .time {
-  grid-area: time;
+  margin-bottom: 0.7rem;
+  grid-template-areas: "time name" ". location" ". description";
 }
 body .cv .entry .name {
   grid-area: name;
   color: #fff;
   font-size: 1.2em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
+}
+body .cv .entry .time {
+  grid-area: time;
+  margin-right: 0.5rem;
 }
 body .cv .entry .location {
   grid-area: location;
   color: #787878;
   font-style: oblique;
+  margin-bottom: 0.5rem;
 }
 body .cv .entry .description {
   grid-area: description;

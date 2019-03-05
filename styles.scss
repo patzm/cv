@@ -23,8 +23,13 @@ body {
 		color: $color-highlight-1;
 	}
 
+	.title {
+		color: $color-primary-1;
+	}
+
 	.subtitle {
-			margin-bottom: 1rem;
+		margin-bottom: 1rem;
+		color: $color-primary-2;
 	}
 
 	.icon-row {
@@ -43,7 +48,6 @@ body {
 			}
 			li {
 				display: flex;
-				width: 100%;
 				justify-content: flex-start;
 			}
 			.stars{
@@ -73,31 +77,29 @@ body {
 
 		.entry {
 			display: grid;
-			grid-template-columns: 1fr 8fr;
+			grid-template-columns: 1fr 5fr;
 			grid-template-rows: repeat(3, auto);
-			grid-gap: 0.5rem;
-			margin-bottom: 0.77777777777777rem;
+			margin-bottom: 0.7rem;
 			grid-template-areas:
 				"time name"
-				"empty location"
-				"empty description";
+				". location"
+				". description";
 
-			.empty {
-				grid-area: empty;
-			}
-			.time {
-				grid-area: time;
-			}
 			.name {
 				grid-area: name;
 				color: $color-primary-1;
 				font-size: 1.2em;
-				margin-bottom: 0.5rem;
+				margin-bottom: 0.1rem;
+			}
+			.time {
+				grid-area: time;
+				margin-right: 0.5rem;
 			}
 			.location {
 				grid-area: location;
 				color: $color-secondary-1;
 				font-style: oblique;
+				margin-bottom: 0.5rem;
 			}
 			.description {
 				grid-area: description;
