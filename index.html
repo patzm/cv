@@ -7,9 +7,23 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css"/>
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 	<title>CV Martin Patz</title>
 </head>
 <body>
+
+<script type="text/javascript">
+  $(document).ready(() => {
+    $(".stars").each(function() {
+      let times = parseInt($(this).attr('n'));
+      const maxStars = 5;
+      for (let i = 0; i < maxStars; i++){
+        let starClass = i < times ? "star highlighted" : "star"
+        $(this).append(`<span class='${starClass}'></span>`);
+      }
+    })
+  })
+</script>
 
 <section class="section">
 	<div class="container">
@@ -32,6 +46,37 @@
 				</div>				
 			</section>
 
+			<section class="section skills">
+				<h2 class="subtitle">programming</h2>
+				<ul>
+					<li>Python <span class="stars" n="5"></span></li>
+					<li>Matlab <span class="stars" n="5"></span></li>
+					<li>C++11 <span class="stars" n="4"></span></li>
+					<li>C# <span class="stars" n="3"></span></li>
+					<li>Java <span class="stars" n="3"></span></li>
+				</ul>
+				<h2 class="subtitle">machine learning</h2>
+				<ul>
+					<li><a href="https://www.tensorflow.org/">TensorFlow</a> <span class="stars" n="5"></span></li>
+					<li><a href="http://caffe.berkeleyvision.org/">Caffe</a> <span class="stars" n="3"></span></li>
+				</ul>
+				<h2 class="subtitle">meta-coding</h2>
+				<ul>
+					<li>LaTeX <span class="stars" n="4"></span></li>
+					<li>Vector graphics (Inkscape) <span class="stars" n="3"></span></li>
+					<li>Databases (SQL) <span class="stars" n="3"></span></li>
+					<li>Android (Java) <span class="stars" n="4"></span></li>
+					<li>Mobile cross-platform (Xamarin) <span class="stars" n="4"></span></li>
+					<li>Desktop cross-platform (Qt) <span class="stars" n="3"></span></li>
+				</ul>
+				<h2 class="subtitle">languages</h2>
+				<ul>
+					<li>German C2<span class="stars" n="5"></span> </li>
+					<li>English C1<span class="stars" n="4"></span> </li>
+					<li>Spanisch B2<span class="stars" n="3"></span></li>
+				</ul>
+				
+			</section>
 		</div>
 
 		<!-- CV COLUMN -->

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body {
   background-color: #2a2d34;
 }
@@ -23,6 +24,25 @@ body .icon-row {
 body .overview .subtitle {
   color: #009ddc;
 }
+body .overview .skills .subtitle {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+body .overview .skills li {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+body .overview .skills .stars {
+  margin-left: auto;
+  align-self: right;
+}
+body .overview .skills .star:before {
+  content: "★";
+}
+body .overview .skills .highlighted {
+  color: red;
+}
 body .section {
   padding: 0;
 }
@@ -36,7 +56,7 @@ body .cv .entry {
   display: grid;
   grid-template-columns: 1fr 8fr;
   grid-template-rows: repeat(3, auto);
-  grid-gap: 0.1rem;
+  grid-gap: 0.5rem;
   margin-bottom: 0.7777777778rem;
   grid-template-areas: "time name" "empty location" "empty description";
 }
